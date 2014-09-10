@@ -14,6 +14,7 @@ public class Nodo {
     int peso;
     char elemento ;
     Nodo izquierda, derecha;
+    String codigo="";
     public Nodo(){
     }
     
