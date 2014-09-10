@@ -69,6 +69,28 @@ public class ArbolHuffman implements Comparable<ArbolHuffman> {
             codigo[(int)r.elemento]=r.codigo;
     }
     
-    
+    public String recorrer(String mapa){
+        String res = "";
+        char[] camino = mapa.toCharArray(); 
+        int i;
+        Nodo actual = raiz; 
+        for (i=0; i<camino.length; i++){
+            if (camino[i]=='0') {
+                actual = actual.izquierda; 
+                if ((actual.derecha == null)&&(actual.izquierda == null)){
+                    res = res + actual.elemento;
+                    actual = raiz; 
+                }
+            }
+            else if (camino[i]=='1') {
+                actual = actual.derecha;
+                if ((actual.derecha == null)&&(actual.izquierda == null)){
+                    res = res + actual.elemento;
+                    actual = raiz; 
+                }
+            }
+        }
+        return res; 
+    }
     
 }
