@@ -2,6 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+package hoja7;
+
+/**
+ *
+ * @author Colegio
+ */
 import java.util.*; 
 /**
  *

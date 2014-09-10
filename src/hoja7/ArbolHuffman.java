@@ -41,11 +41,11 @@ public class ArbolHuffman implements Comparable<ArbolHuffman> {
         Heap<ArbolHuffman> heap = new Heap<ArbolHuffman>();
         for (int i = 0; i < vec.length; i++)
             if (vec[i]>0)
-                heap.add(new ArbolHuffman(vec[i], (char)i));
+                heap.agregar(new ArbolHuffman(vec[i], (char)i));
         while(heap.getSize()>1){
             ArbolHuffman arbol1 = heap.remove();
             ArbolHuffman arbol2 = heap.remove();
-            heap.add(new ArbolHuffman(arbol1,arbol2));
+            heap.agregar(new ArbolHuffman(arbol1,arbol2));
         }
         
         return heap.remove();

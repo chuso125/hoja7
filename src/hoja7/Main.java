@@ -26,7 +26,7 @@ public class Main {
         
         int[] vec = arbol.frequencia(texto); 
   
-       System.out.printf("%s%s%s\n","Caracter", "Frequencia", "Codigo");  
+       System.out.printf("Caracter Frequencia Codigo \n");  
        
        arbol = arbol.obtenerArbol(vec); 
        String[] codigo = new String[256];
@@ -34,7 +34,7 @@ public class Main {
            
        for (int i = 0; i < codigo.length; i++)
          if (vec[i] != 0) 
-           System.out.printf("%s%d%s\n", (char)i + "",vec[i], codigo[i]);
+           System.out.printf("%s        %d           %s\n", (char)i + "",vec[i], codigo[i]);
     }
     
 }
