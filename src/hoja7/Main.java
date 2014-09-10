@@ -35,6 +35,12 @@ public class Main {
        for (int i = 0; i < codigo.length; i++)
          if (vec[i] != 0) 
            System.out.printf("%s        %d           %s\n", (char)i + "",vec[i], codigo[i]);
+        
+       System.out.print("Ingrese un codigo: ");
+       String cod = entrada.nextLine();
+       String res =  arbol.recorrer(cod);
+       System.out.printf("Solucion:"+res+"\n");  
+        
     }
     
 }
